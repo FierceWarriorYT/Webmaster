@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Maven Pro';
+    src: url('../fonts/static/MavenPro-Regular.ttf');
+}
+:root {
+    --almost-black-color: #151515;
+    --purplish-color: #8a42b0;
+    --dark-purple-color: #452159;
+    --font-family: 'Maven Pro', serif;
+    --off-white: #f0e5f6;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--almost-black-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purplish-color);
+}
+
+* {
+    font-family: var(--font-family);
+}
+nav {
+    background-image: linear-gradient(to right, var(--almost-black-color), var(--dark-purple-color));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+}
+nav a {
+    color: var(--off-white);
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: var(--purplish-color);
+    transition: 0.5s;
+    text-underline: var(--purplish-color);
+}
+
+.FancyButton {
+    background-color: var(--purplish-color);
+    color: var(--off-white);
+    transition: 0.5s;
+    border: var(--purplish-color) 1px solid;
+}
+
+.FancyButton:hover {
+    background-color: transparent;
+    border: var(--purplish-color) 1px solid;
+    transition: 0.5s;
+}
+
+.off-white {
+    color: var(--off-white);
+}
+
+.mobile-menu {
+    transition: 0.5s;
+}
+
+.image-bgs {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+}

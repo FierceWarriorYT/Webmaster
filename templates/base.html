@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<nav>
+    <div class="max-w-7xl mx-auto shadow-xl px-7">
+        <div class="flex justify-between">
+            <!-- Logo -->
+            <div>
+                <a href="/" class="flex items-center py-6">
+                    <img class="h-6 w-6 mr-2" src="https://cdn.vox-cdn.com/thumbor/WR9hE8wvdM4hfHysXitls9_bCZI=/0x0:1192x795/1400x1400/filters:focal(596x398:597x399)/cdn.vox-cdn.com/uploads/chorus_asset/file/22312759/rickroll_4k.jpg">
+                    <span class="hidden md:block">Company Name</span>
+                </a>
+            </div>
+            <!-- Mobile View Company Name -->
+            <div class="md:hidden flex items-center">
+                <a class="off-white" href="/">Company Name</a>
+            </div>
+            <!-- Primary Nav -->
+            <div class="hidden md:flex items-center space-x-6 py-4">
+                <a class="px-1">Home</a>
+                <a class="px-1">Trips</a>
+                <a class="px-1">Resources</a>
+            </div>
 
+            <!-- Secondary Nav -->
+            <div class="hidden md:flex items-center space-x-2">
+                <a href="#" class="FancyButton px-3 py-1 rounded-lg">Take Off Now!</a>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 off-white">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+</svg>
+
+            </div>
+            <!-- Mobile Hamburger Menu -->
+            <div class="md:hidden flex items-center hamburger">
+                <button>
+                    <svg class="w-6 h-6 off-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden mobile-menu">
+        <a class="block py-2 px-4">Home</a>
+        <a class="block py-2 px-4">Trips</a>
+        <a class="block py-2 px-4">Resources</a>
+    </div>
+</nav>
+<body>
+    {% block BodyContent %}
+    {% endblock %}
 </body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".mobile-menu");
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    var previousScroll = window.pageYOffset;
+    window.onscroll = function() {
+        var currScroll = window.pageYOffset;
+        if (previousScroll > currScroll) {
+            document.querySelector("nav").style.top= "0";
+        } else {
+            document.querySelector("nav").style.top= "-100px";
+        }
+        previousScroll = currScroll;
+    }
+</script>
 </html>

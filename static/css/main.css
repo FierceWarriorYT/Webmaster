@@ -87,4 +87,11 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.heading h1 {
+    padding: 20px;
 }

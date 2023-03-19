@@ -1,20 +1,71 @@
 {% extends 'base.html' %}
-{% block title %}Company Name{% endblock %}
+{% block title %}Cosmic Cruises{% endblock %}
 
 {% block BodyContent %}
 
-<div class="bigDivs">
-    <div class="image-bgs rellax" data-rellax-speed="-10" style='background-image: url("../static/images/ManOnMoon.png")'></div>
-    <div class="heading">
+<div style="height: 100vh; position: fixed">
+    <div class="image-bgs imgTwo"></div>
+    <div class="image-bgs imgOne"></div>
+</div>
+<div id="content1" style="position: relative; height: 400vh">
+    <div id="LandingText" class="heading" style="top: 50vh">
         <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Start Your Journey Here With Us!</b></h1>
     </div>
+    <div class="heading" style="top: 150vh">
+        <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Experience the Weightlessness on the Moon!</b></h1>
+    </div>
+    <div class="heading" style="top: 250vh">
+        <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Visit The Craters on Mars!</b></h1>
+    </div>
 </div>
-
-<div class="bigDivs">
-    <div class="image-bgs rellax" data-rellax-speed="-10" style='background-image: url("../static/images/LargeMartianLandscape.png")'></div>
-</div>
+<ul>
+  <li>
+    <a href="#0">Underline 1</a>
+  </li>
+  <li>
+    <a href="#0">Underline 2</a>
+  </li>
+  <li>
+    <a href="#0">Underline 3</a>
+  </li>
+</ul>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.imgOne').css("background-image", 'url("../static/images/ManOnMoon.png")')
+        $('.imgTwo').css("background-image", 'url("../static/images/LargeMartianLandscape.png")')
+    })
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".mobile-menu");
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    var previousScroll = window.pageYOffset;
+    window.onscroll = function() {
+        var currScroll = $(this).scrollTop()
+        if (previousScroll > currScroll) {
+            $('nav').css('top', 0)
+        } else {
+            $('nav').css('top', '-100px')
+        }
+        var breakpoint1 = 1050
+        var ImgOne = $('.imgOne')
+        if (currScroll <= breakpoint1) {
+            ImgOne.css('opacity', 1)
+        } else {
+            var currOpacity = ImgOne.css('opacity')
+            console.log("opacity: " + currOpacity)
+            if ((currScroll-breakpoint1) <= 700) {
+                ImgOne.css('opacity', 1-(currScroll-breakpoint1)/750)
+            } else {
+                ImgOne.css('opacity', 0)
+            }
+        }
+        console.log($('#content1').css('height'))
+        previousScroll = currScroll;
+    }
+</script>
 <script>
     var rellax = new Rellax('.rellax')
 </script>

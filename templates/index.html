@@ -2,47 +2,53 @@
 {% block title %}Cosmic Cruises{% endblock %}
 
 {% block BodyContent %}
-
-<div style="height: 100vh; position: fixed">
-    <div class="image-bgs imgTwo"></div>
-    <div class="image-bgs imgOne"></div>
+<div style="position: relative; top: 0; left: 0; width: 100%">
+    <div id="backgrounds" style="height: 100vh; width: 100%; position: absolute; right: 0">
+        <div class="image-bgs imgTwo"></div>
+        <div class="image-bgs imgOne"></div>
+    </div>
+    <div id="content1" style="position: absolute; height: 400vh; top: 0; left: 0; width: 100%">
+        <div class="heading" id="LandingText" style="top: 50vh">
+            <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Start Your Journey Here With Us!</b></h1>
+        </div>
+        <div class="heading" style="top: 150vh">
+            <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Experience the Weightlessness on the Moon!</b>
+            </h1>
+        </div>
+        <div class="heading" style="top: 250vh">
+            <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Visit The Craters on Mars!</b></h1>
+        </div>
+    </div>
+    <div style="height: 100vh; position: absolute; top: 325vh; width: 100%;">
+        <div id="BlackBG" style="height: 100vh; width: auto" data-rellax-speed="7"></div>
+    </div>
+    <div>
+        <h1>Testing</h1>
+    </div>
 </div>
-<div id="content1" style="position: relative; height: 400vh">
-    <div id="LandingText" class="heading" style="top: 50vh">
-        <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Start Your Journey Here With Us!</b></h1>
-    </div>
-    <div class="heading" style="top: 150vh">
-        <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Experience the Weightlessness on the Moon!</b></h1>
-    </div>
-    <div class="heading" style="top: 250vh">
-        <h1 class="off-white text-7xl text-center drop-shadow-2xl"><b>Visit The Craters on Mars!</b></h1>
-    </div>
-</div>
-<ul>
-  <li>
-    <a href="#0">Underline 1</a>
-  </li>
-  <li>
-    <a href="#0">Underline 2</a>
-  </li>
-  <li>
-    <a href="#0">Underline 3</a>
-  </li>
-</ul>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
-    $(document).ready(function() {
+
+    $(document).ready(function () {
         $('.imgOne').css("background-image", 'url("../static/images/ManOnMoon.png")')
         $('.imgTwo').css("background-image", 'url("../static/images/LargeMartianLandscape.png")')
+        $('nav').css('top', 0)
     })
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector(".mobile-menu");
     hamburger.addEventListener("click", () => {
         menu.classList.toggle("hidden");
     });
-    var previousScroll = window.pageYOffset;
-    window.onscroll = function() {
+    var previousScroll = $(window).scrollTop
+    $(window).scroll(function() {
+        function elementScrolled(elem)
+        {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top;
+            return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+        }
         var currScroll = $(this).scrollTop()
         if (previousScroll > currScroll) {
             $('nav').css('top', 0)
@@ -55,16 +61,14 @@
             ImgOne.css('opacity', 1)
         } else {
             var currOpacity = ImgOne.css('opacity')
-            console.log("opacity: " + currOpacity)
-            if ((currScroll-breakpoint1) <= 700) {
-                ImgOne.css('opacity', 1-(currScroll-breakpoint1)/750)
+            if ((currScroll - breakpoint1) <= 700) {
+                ImgOne.css('opacity', 1 - (currScroll - breakpoint1) / 750)
             } else {
                 ImgOne.css('opacity', 0)
             }
         }
-        console.log($('#content1').css('height'))
         previousScroll = currScroll;
-    }
+    })
 </script>
 <script>
     var rellax = new Rellax('.rellax')

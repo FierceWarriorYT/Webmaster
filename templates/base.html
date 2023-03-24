@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,13 +13,13 @@
             <!-- Logo -->
             <div>
                 <a href="#" class="flex items-center py-3">
-                    <img class="mr-2" style="height: 3.5rem;" src="../static/images/Logo.svg">
+                    <img class="md:mr-2 h-12 md:h-14" src="../static/images/Logo.svg">
                     <span class="hidden md:block">Cosmic Cruises</span>
                 </a>
             </div>
             <!-- Mobile View Company Name -->
             <div class="md:hidden flex items-center">
-                <a class="off-white" href="/">Company Name</a>
+                <a class="off-white" href="/">Cosmic Cruises</a>
             </div>
             <!-- Primary Nav -->
             <div class="hidden md:flex items-center space-x-6 py-4">
@@ -48,9 +49,9 @@
     </div>
     <!-- Mobile Menu -->
     <div class="hidden mobile-menu">
-        <a class="block py-2 px-4">Home</a>
-        <a class="block py-2 px-4">Trips</a>
-        <a class="block py-2 px-4">Resources</a>
+        <a class="block py-2">Home</a>
+        <a class="block py-2">Trips</a>
+        <a class="block py-2">Resources</a>
     </div>
 </nav>
 <body>

@@ -8,6 +8,7 @@
     --dark-purple-color: #452159;
     --font-family: 'Maven Pro', serif;
     --off-white: #f0e5f6;
+    --slightly-darker-off-white: #d2c8d7;
 }
 
 body::-webkit-scrollbar {
@@ -105,7 +106,6 @@ nav a:hover {
     position: absolute;
     left: 50vw;
     transform: translate(-50%, 0%);
-    display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: var(--almost-black-color) 2px 2px 2px;
@@ -113,7 +113,8 @@ nav a:hover {
 }
 
 .heading h1 {
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -153,4 +154,42 @@ nav a:hover {
 #BlackBG {
     clip-path: polygon(50% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);
     background-color: var(--almost-black-color);
+}
+
+.btn-promo {
+    background-color: transparent;
+    border: var(--purplish-color) 1px solid;
+    transition: 0.5s;
+    font-size: 1.2rem;
+}
+
+.btn-promo:hover{
+    background-color: var(--purplish-color);
+    border: var(--purplish-color) 1px solid;
+    transition: 0.5s;
+}
+
+.rocket-ship {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btn-promo:hover ~ .rocket-ship {
+    opacity: 1;
+    transition: 0.5s;
+    animation: rocket-fly 1s forwards;
+}
+
+@keyframes rocket-fly {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, -100%);
+    }
+}
+
+bolded {
+    text-shadow: var(--slightly-darker-off-white) 2px 2px 2px,
+            var(--almost-black-color) 5px 5px 5px;
 }

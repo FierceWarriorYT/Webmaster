@@ -1,41 +1,65 @@
 {% extends 'base.html' %}
 {% block title %}Trips{% endblock %}
 {% block BodyContent %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/trips.css') }}">
-    <div class='flex'>
-        <div class='cols col-1' style="background: red">
-
+<link href="{{ url_for('static', filename='css/trips.css') }}" rel="stylesheet">
+<div style="position: relative;">
+    <div class='flex bg-almost-black'>
+        <div class='cols col-1' style="position: relative">
+            <div class="col-img col-img-1"></div>
+            <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
+                <button style="animation-delay: 1.65s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">The Moon</button>
+            </div>
         </div>
-        <div class='cols col-2' style="background: blue">
-
+        <div class='cols col-2' style="position: relative">
+            <div class="col-img col-img-2"></div>
+            <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
+                <button style="animation-delay: 1.75s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">Mars</button>
+            </div>
         </div>
-        <div class='cols col-3' style="background: green">
-
+        <div class='cols col-3' style="position: relative">
+            <div class="col-img col-img-3"></div>
+            <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
+                <button style="animation-delay: 1.85s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">Asteroids</button>
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('nav').css('top', 0);
-        })
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector(".mobile-menu");
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-        var previousScroll = $(window).scrollTop
-        $(window).scroll(function () {
-            var currScroll = $(this).scrollTop()
-            if (previousScroll > currScroll) {
-                $('nav').css('top', 0)
-            } else {
-                $('nav').css('top', '-100px')
-            }
-            previousScroll = currScroll;
-        })
-    </script>
-    <script>
-        var rellax = new Rellax('.rellax')
-    </script>
+    <div id="StartAdventure">
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl"><b>Choose Where to Begin Your New Adventure!</b></h1>
+    </div>
+    <div id="scrollMore"><h3 class="off-white text-3xl md:text-xl">Scroll for More</h3></div>
+    <div style="height: 100%; width: 100%; position: absolute; background: var(--almost-black-color)">
+        <div style="height: 100%; width: 100%;"></div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    var scrolled = false;
+    $(document).ready(function () {
+        $('nav').css('top', 0);
+        scrolled = false;
+    })
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".mobile-menu");
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    var previousScroll = $(window).scrollTop
+    $(window).scroll(function () {
+        var currScroll = $(this).scrollTop()
+        if (previousScroll > currScroll) {
+            $('nav').css('top', 0)
+        } else {
+            $('nav').css('top', '-100px')
+        }
+        previousScroll = currScroll;
+        if (!scrolled) {
+            $('#scrollMore').addClass('hidden');
+            scrolled = true;
+        }
+    })
+</script>
+<script>
+    var rellax = new Rellax('.rellax')
+</script>
 {% endblock %}

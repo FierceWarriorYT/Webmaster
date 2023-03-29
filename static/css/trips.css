@@ -1,17 +1,91 @@
 .cols {
     height: 100vh;
     width: 33.33%;
-    animation: slideTop 1s forwards;
 }
 
-.col-1 {
-
+.col-img {
+    height: 100%;
+    width: 100%;
+    animation: slideFromTop 2s forwards;
+    transform: translateY(-100%);
 }
 
-.col-2 {
-
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: brightness(0.6);
+    }
 }
 
-.col-3 {
+.col-img-1 {
+    animation-delay: 0.25s;
+    background: linear-gradient(transparent, var(--almost-black-color)), url("/static/images/MoonTripsPage.png");
+    background-position-x: 50%;
+}
 
+.col-img-2 {
+    animation-delay: 0.5s;
+    background: linear-gradient(transparent, var(--almost-black-color)), url("/static/images/OlympusMons.png");
+    background-position-x: 20%;
+}
+
+.col-img-3 {
+    animation-delay: 0.75s;
+    background: linear-gradient(transparent, var(--almost-black-color)), url("/static/images/Asteroids.png");
+    background-position-x: 20%;
+}
+
+#StartAdventure {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: slideFromBottom 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+#scrollMore {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    animation: slideFromBottom 1s forwards;
+    animation-delay: 1.95s;
+}
+
+.btnPlaces {
+    animation: opacityShow 1s forwards;
+    opacity: 0;
+    font-size: 1.6rem !important;
+}
+
+@keyframes opacityShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

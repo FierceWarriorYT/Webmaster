@@ -7,38 +7,135 @@
         <div class='cols col-1' style="position: relative">
             <div class="col-img col-img-1"></div>
             <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
-                <button style="animation-delay: 1.65s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">The Moon</button>
+                <button class="off-white px-2 py-1 rounded-lg btn-places btn-places-1" id="Moon-btn"
+                        onclick="ScrollToElement(document.getElementById('Moon'))" style="animation-delay: 1.65s">
+                    The Moon
+                </button>
             </div>
         </div>
         <div class='cols col-2' style="position: relative">
             <div class="col-img col-img-2"></div>
             <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
-                <button style="animation-delay: 1.75s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">Mars</button>
+                <button class="off-white px-2 py-1 rounded-lg btn-places"
+                        onclick="ScrollToElement(document.getElementById('Mars'))" style="animation-delay: 1.75s">Mars
+                </button>
             </div>
         </div>
         <div class='cols col-3' style="position: relative">
             <div class="col-img col-img-3"></div>
             <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
-                <button style="animation-delay: 1.85s" class="btn-promo off-white px-2 py-1 rounded-lg btnPlaces">Asteroids</button>
+                <button class="off-white px-2 py-1 rounded-lg btn-places"
+                        onclick="ScrollToElement(document.getElementById('Asteroids'))" style="animation-delay: 1.85s">Asteroids
+                </button>
             </div>
         </div>
     </div>
     <div id="StartAdventure">
-        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl"><b>Choose Where to Begin Your New Adventure!</b></h1>
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl"><b>Choose Where to Begin Your New
+            Adventure!</b></h1>
     </div>
     <div id="scrollMore"><h3 class="off-white text-3xl md:text-xl">Scroll for More</h3></div>
     <div style="height: 100%; width: 100%; position: absolute; background: var(--almost-black-color)">
         <div style="height: 100%; width: 100%;"></div>
+        <div data-inviewport="fade-in"
+             style="position: absolute; top: 25%; left: 50%; transform: translateX(-50%)"><h2
+                class="off-white text-3xl md:text-5xl">Want to Experience the Excitement at all the Locations? Try our
+            Combined Pack!</h2></div>
+        <div style="position: absolute; top: 90%; left: 50%; transform: translateX(-50%)"><h3
+                class="off-white text-3xl md:text-xl">Find Out More About Each Location Down Below!</h3></div>
+    </div>
+    <div class="bg-almost-black" id="Moon" style="width: 100%; height: 100%; position: absolute; top: 200%">
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
+        <br>
+        <div class="flex-col" style="height: 100%">
+            <div class="flex" style="height: 50%">
+                <div style="width: 50%; background: url('../static/images/MoonCafe.png'); background-position-y: 30%"></div>
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="bg-almost-black" id="Mars" style="width: 100%; height: 100%; position: absolute; top: 300%">
+
+
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
+        <br>
+        <div class="flex-col" style="height: 100%; width: 100%; position: relative">
+            <div class="border" style="position: absolute; width: 100%; height: 50%; background: url('../static/images/MoonCafe.png') no-repeat; background-size: cover;"></div>
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="bg-almost-black" id="Asteroids" style="width: 100%; height: auto; position: absolute; top: 400%">
+
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
+        <br>
+        <div class="flex-col" style="height: 100vh">
+            <div class="flex" style="height: 50%">
+                <div class="" style="width: 50%; position: relative"><div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div></div>
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex" style="height: 50%">
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    </div>
+                </div>
+                <div class="" style="width: 50%; position: relative"><div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div></div>
+
+            </div>
+
+
+        </div>
+
+    <br>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
+
     var scrolled = false;
     $(document).ready(function () {
         $('nav').css('top', 0);
         scrolled = false;
-    })
+    });
+    const inViewport = (entries, observer) => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+        });
+    };
+
+    function ScrollToElement(element) {
+        element.scrollIntoView({behavior: "smooth"})
+    }
+
+    const Obs = new IntersectionObserver(inViewport);
+    const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+    // Attach observer to every [data-inviewport] element:
+    const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+    ELs_inViewport.forEach(EL => {
+        Obs.observe(EL, obsOptions);
+    });
+
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector(".mobile-menu");
     hamburger.addEventListener("click", () => {

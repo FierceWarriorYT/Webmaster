@@ -123,3 +123,7 @@
     height: auto;
     position: absolute;
 }
+
+body {
+    background-color: var(--almost-black-color);
+}

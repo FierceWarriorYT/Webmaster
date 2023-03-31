@@ -11,6 +11,11 @@ def index():
 def trips():
     return render_template('trips.html')
 
+@app.route('/how-it-works')
+def how_it_works():
+    return render_template('how-it-works.html')
+
+
 @app.route('/sources')
 def sources():
     return render_template('sources.html')

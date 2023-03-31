@@ -85,7 +85,7 @@
     font-size: 1.6rem !important;
 }
 
-.btn-places:hover{
+.btn-places:hover {
     background-color: var(--purplish-color);
     border: var(--purplish-color) 1px solid;
     transition: 0.5s;
@@ -116,4 +116,10 @@
     border-width: 3px;
     border-radius: 70px;
 
+}
+
+.destinations {
+    width: 100%;
+    height: auto;
+    position: absolute;
 }

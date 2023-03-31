@@ -25,7 +25,8 @@
             <div class="col-img col-img-3"></div>
             <div style="position: absolute; top: 75%; left: 50%; transform: translateX(-50%)">
                 <button class="off-white px-2 py-1 rounded-lg btn-places"
-                        onclick="ScrollToElement(document.getElementById('Asteroids'))" style="animation-delay: 1.85s">Asteroids
+                        onclick="ScrollToElement(document.getElementById('Asteroids'))" style="animation-delay: 1.85s">
+                    Asteroids
                 </button>
             </div>
         </div>
@@ -44,69 +45,113 @@
         <div style="position: absolute; top: 90%; left: 50%; transform: translateX(-50%)"><h3
                 class="off-white text-3xl md:text-xl">Find Out More About Each Location Down Below!</h3></div>
     </div>
-    <div class="bg-almost-black" id="Moon" style="width: 100%; height: 100%; position: absolute; top: 200%">
-        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
-        <br>
-        <div class="flex-col" style="height: 100%">
-            <div class="flex" style="height: 50%">
-                <div style="width: 50%; background: url('../static/images/MoonCafe.png'); background-position-y: 30%"></div>
-                <div style="width: 50%; position: relative">
-                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-
-    </div>
-    <div class="bg-almost-black" id="Mars" style="width: 100%; height: 100%; position: absolute; top: 300%">
-
-
-        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
-        <br>
-        <div class="flex-col" style="height: 100%; width: 100%; position: relative">
-            <div class="border" style="position: absolute; width: 100%; height: 50%; background: url('../static/images/MoonCafe.png') no-repeat; background-size: cover;"></div>
-                <div style="width: 50%; position: relative">
-                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
-                    </div>
-                </div>
-        </div>
-
-
-
-
-    </div>
-    <div class="bg-almost-black" id="Asteroids" style="width: 100%; height: auto; position: absolute; top: 400%">
-
+    <div class="bg-almost-black destinations" id="Moon" style="top: 200%">
         <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">The Moon</h1>
         <br>
         <div class="flex-col" style="height: 100vh">
             <div class="flex" style="height: 50%">
-                <div class="" style="width: 50%; position: relative"><div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div></div>
+                <div class="" style="width: 50%; position: relative">
+                    <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/MoonCafe.png') no-repeat center;"></div>
+                </div>
                 <div style="width: 50%; position: relative">
-                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
+                         style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon
+                            and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will
+                            never be unsatisfied.</h1>
                     </div>
                 </div>
             </div>
-
             <div class="flex" style="height: 50%">
                 <div style="width: 50%; position: relative">
-                    <div class="info-border-box flex items-center justify-center" style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will never be unsatisfied.</h1>
+                    <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
+                         style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon
+                            and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will
+                            never be unsatisfied.</h1>
                     </div>
                 </div>
-                <div class="" style="width: 50%; position: relative"><div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div></div>
-
+                <div class="" style="width: 50%; position: relative">
+                    <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div>
+                </div>
             </div>
+        </div>
+        <br>
+    </div>
 
+    <div class="bg-almost-black destinations" id="Mars" style="top: 315%">
+        <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">Mars</h1>
+        <br>
+        <div class="flex-col" style="height: 100vh">
+            <div class="flex" style="height: 50%">
+                <div class="" style="width: 50%; position: relative">
+                    <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/MarsSunrise.png') no-repeat center;"></div>
+                </div>
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
+                         style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">There is nothing like the peace and
+                            tranquility in looking out at the beauty that Mars beholds</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex" style="height: 50%">
+                <div style="width: 50%; position: relative">
+                    <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
+                         style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon
+                            and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will
+                            never be unsatisfied.</h1>
+                    </div>
+                </div>
+                <div class="" style="width: 50%; position: relative">
+                    <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<div class="bg-almost-black destinations" id="Asteroids" style="top: 430%">
+
+    <h1 class="off-white text-6xl md:text-7xl text-center drop-shadow-2xl">Asteroids</h1>
+    <br>
+    <div class="flex-col" style="height: 100vh">
+        <div class="flex" style="height: 50%">
+            <div class="" style="width: 50%; position: relative">
+                <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div>
+            </div>
+            <div style="width: 50%; position: relative">
+                <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
+                     style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h1 class="off-white text-xl md:text-2xl text-center px-12">Look out to the beauty of the Moon
+                        and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will
+                        never be unsatisfied.</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex" style="height: 50%">
+            <div style="width: 50%; position: relative">
+                <div class="info-border-box flex items-center justify-center"
+                     style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h1 class="off-white text-xl md:text-2xl text-center px-12" data-inviewport="fade-in">Look out to
+                        the beauty of the Moon
+                        and the Magestic Earth as you enjoy a meal at our Moon Cafe. With Multiple Cuisines you will
+                        never be unsatisfied.</h1>
+                </div>
+            </div>
+            <div class="" style="width: 50%; position: relative">
+                <div style="position: absolute; width: 100%; height: 100%; background: url('../static/images/AsteroidsLightBG.png') no-repeat center;"></div>
+            </div>
 
         </div>
 
-    <br>
+
     </div>
+
+    <br>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

@@ -1,6 +1,69 @@
 {% extends 'base.html' %}
-{% block title %}Sources{% endblock %}
+{% block title %}Cosmic Cruises{% endblock %}
 
 {% block BodyContent %}
-
+<div>
+    <div class="headingBox">
+        <h1 class="off-white text-2xl md:text-4xl text-center px-10 py-4">Sources Used</h1>
+    </div>
+    <div class="bodybox">
+    </div>
+    <div class="spacer" style="height: 10%; position: absolute; width: 100%"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var bodybox = $('.bodybox');
+        var spacer = $('.spacer');
+        var offset = bodybox.offset().top + parseInt(bodybox.css('height'), 10)
+        spacer.css('top', (offset+'px'))
+    })
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".mobile-menu");
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    var previousScroll = $(window).scrollTop;
+    $(window).scroll(function () {
+        var currScroll = $(this).scrollTop()
+        if (previousScroll > currScroll) {
+            $('nav').css('top', 0)
+            console.log('asdfasdf')
+        } else {
+            $('nav').css('top', '-100px')
+            console.log('hhhhh')
+        }
+        previousScroll = currScroll;
+    })
+</script>
+<script>
+    var rellax = new Rellax('.rellax')
+</script>
+<style>
+    body {
+        background: var(--almost-black-color);
+    }
+    .headingBox {
+        border-color: var(--purplish-color);
+        border-width: 5px;
+        border-radius: 70px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .bodybox {
+        background: var(--purplish-color);
+        border-color: var(--dark-purple-color);
+        border-width: 5px;
+        border-radius: 70px;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 50%;
+    }
+</style>
 {% endblock %}

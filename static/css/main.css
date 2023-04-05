@@ -220,11 +220,15 @@ bolded {
     opacity: 1;
 }
 
-[data-inviewport="darken"] {
+[data-inviewport="darken"], [data-inviewport="darken-less"] {
     filter: none;
     transition: 2s;
 }
 
 [data-inviewport="darken"].first-time {
     filter: brightness(0.3);
+}
+
+[data-inviewport="darken-less"].first-time {
+    filter: brightness(0.5);
 }

@@ -91,6 +91,21 @@
     transition: 0.5s;
 }
 
+.btn-places-rev {
+    background-color: var(--purplish-color);
+    border: var(--purplish-color) 1px solid;
+    transition: 0.5s;
+    animation: opacityShow 1s forwards;
+    opacity: 0;
+    font-size: 1.6rem !important;
+}
+
+.btn-places-rev:hover {
+    background-color: transparent;
+    border: var(--purplish-color) 1px solid;
+    transition: 0.5s;
+}
+
 @keyframes opacityShow {
     0% {
         opacity: 0;

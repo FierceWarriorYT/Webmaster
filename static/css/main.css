@@ -121,6 +121,10 @@ nav a:hover {
     transition: 0.5s;
 }
 
+.links:hover{
+    color: var(--almost-black-color);
+    transition: 0.5s;
+}
 
 #LandingText::before {
     content: '';

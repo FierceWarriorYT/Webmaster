@@ -100,14 +100,6 @@
     }
 }
 
-[data-inviewport="fade-in"] {
-    opacity: 0;
-    transition: 2s;
-}
-
-[data-inviewport="fade-in"].is-inViewport {
-    opacity: 1;
-}
 
 .info-border-box {
     background: transparent;

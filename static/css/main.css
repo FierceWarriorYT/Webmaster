@@ -46,7 +46,7 @@ nav a:hover {
     transition: 0.5s;
 }
 
-.navlinks::before {
+.navlinks::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -59,7 +59,7 @@ nav a:hover {
     transition: 0.5s;
 }
 
-.navlinks:hover::before {
+.navlinks:hover::before{
     transform: scaleX(1);
     transition: 0.5s;
 }
@@ -115,6 +115,10 @@ nav a:hover {
 .heading h1 {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.links {
+    transition: 0.5s;
 }
 
 
@@ -192,4 +196,31 @@ nav a:hover {
 bolded {
     text-shadow: var(--slightly-darker-off-white) 2px 2px 2px,
             var(--almost-black-color) 5px 5px 5px;
+}
+
+[data-inviewport="fade-in"] {
+    opacity: 0;
+    transition: 2s;
+}
+
+[data-inviewport="fade-in"].first-time {
+    opacity: 1;
+}
+
+[data-inviewport="fade-in-slow"] {
+    opacity: 0;
+    transition: opacity 4s;
+}
+
+[data-inviewport="fade-in-slow"].first-time {
+    opacity: 1;
+}
+
+[data-inviewport="darken"] {
+    filter: none;
+    transition: 2s;
+}
+
+[data-inviewport="darken"].first-time {
+    filter: brightness(0.3);
 }

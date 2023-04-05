@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -16,10 +16,13 @@ def how_it_works():
     return render_template('how-it-works.html')
 
 
-@app.route('/sources')
+@app.route('/references-sources')
 def sources():
-    return render_template('sources.html')
+    return render_template('references-sources.html')
 
+@app.route('/promotions')
+def promotions():
+    return render_template('promotions.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

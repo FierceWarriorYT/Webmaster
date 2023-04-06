@@ -48,7 +48,6 @@
 #StartAdventure {
     position: absolute;
     left: 50%;
-    top: 40%;
     transform: translateX(-50%);
     opacity: 0;
     animation: slideFromBottom 1s forwards;
@@ -97,7 +96,7 @@
     transition: 0.5s;
     animation: opacityShow 1s forwards;
     opacity: 0;
-    font-size: 1.6rem !important;
+    font-size: 1.6rem;
 }
 
 .btn-places-rev:hover {
@@ -137,9 +136,29 @@ body {
 
 .inner-box {
     position: absolute;
-    width: 80%;
+    width: 70%;
     height: auto;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 10vh);
+}
+
+@media screen and (max-width: 600px) {
+    .inner-box {
+        transform: translate(-50%, 5%);
+        width: 80%;
+    }
+
+    #top-inner-box {
+        transform: translate(-50%, 13vh) !important;
+    }
+    .btn-places-rev {
+        font-size: 1.2rem;
+    }
+}
+
+.bigbgs {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
 }

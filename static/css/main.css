@@ -232,3 +232,15 @@ bolded {
 [data-inviewport="darken-less"].first-time {
     filter: brightness(0.5);
 }
+
+[data-inviewport="fly-in-from-left"] {
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: 1.1s;
+}
+
+[data-inviewport="fly-in-from-left"].first-time {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+

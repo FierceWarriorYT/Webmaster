@@ -2,27 +2,209 @@
 {% block title %}Cosmic Cruises{% endblock %}
 
 {% block BodyContent %}
+<link href="{{ url_for('static', filename='css/trips.css') }}" rel="stylesheet">
+<div>
+    <br><br><br><br>
 
-<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script>
-    const hamburger = document.querySelector(".hamburger");
-    const menu = document.querySelector(".mobile-menu");
-    hamburger.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-    var previousScroll = $(window).scrollTop;
-    $(window).scroll(function () {
-        var currScroll = $(this).scrollTop()
-        if (previousScroll > currScroll) {
-            $('nav').css('top', 0)
-        } else {
-            $('nav').css('top', '-100px')
+    <div>
+        <h1 class="off-white text-3xl md:text-6xl text-center px-10">Space-Suits</h1>
+        <br>
+        <div class="flex-col">
+            <div class="flex h-[30rem]">
+                <div class="flex w-1/2">
+                    <div class="w-[80%] h-[80%] mx-auto my-auto"
+                         style="background: url('../static/images/FemaleSpaceSuit.jpg') no-repeat center; background-size: cover; border-radius: 40px; background-position-y: 10%;"></div>
+                </div>
+                <div class="flex w-1/2">
+                    <div class="w-[80%] h-[80%] mx-auto my-auto"
+                         style="background: url('../static/images/MaleSpaceSuit.jpg') no-repeat center; background-size: cover; border-radius: 40px; background-position-y: 10%;"></div>
+                </div>
+                <div class="w-1/2 hidden md:flex">
+                    <div class="w-[80%] h-[80%] mx-auto my-auto"
+                         style="background: url('../static/images/SpaceSuitWalking.jpg') no-repeat center; background-size: cover; border-radius: 40px; background-position-y: 10%;"></div>
+                </div>
+            </div>
+            <div data-inviewport="fade-in" class="flex items-center justify-center h-[50rem] sm:h-[30rem] lg:h-[25rem] w-auto">
+                <div class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                     style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2">Cosmic Cruises,
+                    the safety and well-being of our customers are of utmost importance to us. When it
+                    comes to space travel, the use of spacesuits is essential to ensure the protection of our passengers
+                    during their journey. Our spacesuits would be made from the latest and most advanced materials,
+                    including high-tech fibers and special coatings that are capable of withstanding the extreme
+                    conditions of space. Additionally, each spacesuit would be equipped with a built-in life support
+                    system, which would provide the necessary oxygen, temperature control, and communication
+                    capabilities to keep our passengers safe and connected throughout their journey. The suits would be
+                    designed to be modular, allowing for easy customization depending on the needs and preferences of
+                    each individual passenger.
+                </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <h1 class="off-white text-3xl md:text-6xl text-center px-10">Training</h1>
+        <br>
+        <div class="flex-col">
+            <div class="flex h-[30rem]">
+                <div class="flex w-1/2">
+                    <div class="w-[80%] h-[80%] mx-auto my-auto"
+                         style="background: url('../static/images/Training1.png') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+                <div class="flex w-1/2">
+                    <div class="w-[80%] h-[80%] mx-auto my-auto"
+                         style="background: url('../static/images/Training2.png') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+            </div>
+            <div data-inviewport="fade-in" class="flex items-center justify-center h-[50rem] sm:h-[30rem] lg:h-[25rem] w-auto">
+                <div class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                     style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2 py-3">We at Cosmic
+                    Cruises provide customers with an unforgettable experience. In order to achieve this, we
+                    believe that training customers in the skills and knowledge necessary to live on different planets
+                    is essential to achieving this goal. Our training programs would be led by experienced space
+                    professionals and incorporate simulations and practical exercises. Customers would learn how to
+                    manage resources such as oxygen, water, and energy, as well as basic survival skills such as how to
+                    find food and water, build shelter, and navigate in unfamiliar terrain. We believe that our training
+                    programs will give customers the skills and knowledge they need to have a safe and enjoyable
+                    experience on their journey to different planets.
+                </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="off-white text-3xl md:text-6xl text-center px-10">Vehicles</h1>
+        <div class="flex flex-wrap">
+            <div class="flex-col" style="flex: 1">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">Space-Shuttle</h1>
+                <div class="flex w-full md:h-[50vh] h-[30vh] lg:h-[60vh] items-center justify-center">
+                    <div class="w-[80%] md:h-[80%] h-[70%]"
+                         style="background: url('../static/images/Space-Shuttle.jpg') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <div data-inviewport="fade-in" class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                         style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2 py-3">The Space
+                        Shuttle will be equipped with the latest in luxury amenities, including spacious seating areas,
+                        private cabins, gourmet dining options, and entertainment systems that provide a range of
+                        options for relaxation and entertainment during the journey. The shuttle will also be equipped
+                        with advanced life support systems and environmental controls to ensure that our customers are
+                        safe and comfortable during their journey through space.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col" style="flex: 1">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">Rover</h1>
+                <div class="flex w-full md:h-[50vh] h-[30vh] lg:h-[60vh] items-center justify-center">
+                    <div class="w-[80%] md:h-[80%] h-[70%]"
+                         style="background: url('../static/images/Rover.jpg') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <div data-inviewport="fade-in" class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                         style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2 py-3">Our
+                        vehicles would be carefully designed to be both functional and safe, taking into account the
+                        unique characteristics of each planet's environment, such as surface composition, gravity, and
+                        atmospheric conditions. For example, on Mars, we would use rovers specifically designed to
+                        navigate the rocky terrain and steep slopes, while on the moon, we would use lunar rovers that
+                        can travel over the rough and dusty lunar surface. In addition, our vehicles would be equipped
+                        with the necessary equipment to keep our passengers safe and comfortable during their journey,
+                        including life support systems, communication systems, and environmental control systems.
+                    </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="off-white text-3xl md:text-6xl text-center px-10">Launch & Recovery</h1>
+        <div class="flex flex-wrap">
+            <div class="flex-col" style="flex: 1">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">Skyhook</h1>
+                <div class="flex w-full md:h-[50vh] h-[30vh] lg:h-[60vh] items-center justify-center">
+                    <div class="w-[80%] md:h-[80%] h-[70%]"
+                         style="background: url('../static/images/RotatingSkyhook.png') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <div data-inviewport="fade-in" class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                         style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2 py-3">To make our trips as cost efficient and as fast as possible, Cosmic Cruises will use skyhooks that have been build on Earth and each of our locations. The aircraft that we have will attach to the skyhook which will use rotational momentum to hurl the spacecraft at much higher
+                        speeds than a conventional rocket which would lead to a much faster trip that will not use much of the limited, valuable fuel the spaceships have. Then, the skyhook at the destination will catch the aircraft which will keep restoring the angular momentum of the skyhook that will be used to launch it back to Earth. Check out the paper below to learn more about the functionality of the skyhooks and the math behind it.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col" style="flex: 1">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">Bases</h1>
+                <div class="flex w-full md:h-[50vh] h-[30vh] lg:h-[60vh] items-center justify-center">
+                    <div class="w-[80%] md:h-[80%] h-[70%]"
+                         style="background: url('../static/images/Base.png') no-repeat center; background-size: cover; border-radius: 40px"></div>
+                </div>
+                <div class="flex w-full items-center justify-center">
+                    <div data-inviewport="fade-in" class="info-border-box flex items-center justify-center px-2 py-2 w-[90%] md:w-[80%]"
+                         style="height: auto;"><h1 class="off-white text-lg md:text-2xl text-center px-2 py-3">On the surface of these destinations, there will be the luxurious Cosmic Cruise Resorts where travelers can spend their time and will be housed and treated to the best facilities. From these bases, tourists can take our rovers to explore many regions and indulge in one of many different activities offered at each of our destinations.
+                        This will also serve as a spaceship refueling center and and needed restocking or repairs can be made. This will allow the crew to prepare and consolidate for the long-ride back home, even with the increased speed of the skyhook.
+                    </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">For Those Interested, Check out this Writeup
+                Below
+                Which Goes into the Math Behind our Launch!</h1>
+            <br>
+            <div>
+                <iframe allow="autoplay"
+                        src="https://drive.google.com/file/d/1e3HjU6PcPvlbvakRjRPoCjhtUD8_KaLD/preview"
+                        style="width: 100%; height: 75vh"></iframe>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+            background: var(--almost-black-color);
         }
-        previousScroll = currScroll;
-    })
-</script>
-<script>
-    var rellax = new Rellax('.rellax')
-</script>
-{% endblock %}
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".mobile-menu");
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+         const inViewport = (entries, observer) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("first-time");
+                }
+            });
+        };
+
+        function ScrollToElement(element) {
+            element.scrollIntoView({behavior: "smooth"})
+        }
+
+        const Obs = new IntersectionObserver(inViewport);
+        const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+        // Attach observer to every [data-inviewport] element:
+        const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+        ELs_inViewport.forEach(EL => {
+            Obs.observe(EL, obsOptions);
+        });
+        var previousScroll = $(window).scrollTop;
+        $(window).scroll(function () {
+            var currScroll = $(this).scrollTop()
+            if (previousScroll > currScroll) {
+                $('nav').css('top', 0)
+            } else {
+                $('nav').css('top', '-100px')
+            }
+            previousScroll = currScroll;
+        })
+    </script>
+    <script>
+        var rellax = new Rellax('.rellax')
+    </script>
+    {% endblock %}

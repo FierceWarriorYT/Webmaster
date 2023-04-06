@@ -1,140 +1,208 @@
 {% extends 'base.html' %}
 {% block title %}Promotions{% endblock %}
 {% block BodyContent %}
-    <link href="{{ url_for('static', filename='css/trips.css') }}" rel="stylesheet">
-    <style>
-        body {
-            background: var(--almost-black-color);
-        }
-    </style>
-    <div>
-        <div id="EarthRise" style="height: 100vh; width: 100%; position: relative">
-            <div data-inviewport="darken-less"
-                 style="position: absolute; height: 100%; width: 100%; background: url('../static/images/EarthRise.jpg'); background-size: cover; background-position-y: 30%"></div>
-            <div data-inviewport="fade-in" style="position: absolute; top: 25%; width: 100%; height: 20%">
-                <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
-                     style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                    <h1 class="off-white text-xl md:text-2xl text-center px-12">This promotion takes you on a unique
-                        journey
-                        to witness our home planet from a distance. You'll travel to the Moon and watch as the Earth
-                        rises
-                        above the lunar horizon, a sight that only a handful of people have ever seen in person.</h1>
-                </div>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); transition-delay: 1.25s">
-                <h5 class="off-white text-m md:text-lg text-center px-12">Price: $150, 000</h5>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 65%; left: 50%; transform: translateX(-50%); transition-delay: 0.75s">
-                <button class="off-white px-2 py-1 rounded-lg btn-places-rev"
-                        style="animation: none; opacity: 1;">
-                    Sign Up Now!
-                </button>
+<link href="{{ url_for('static', filename='css/trips.css') }}" rel="stylesheet">
+<style>
+    body {
+        background: var(--almost-black-color);
+    }
+</style>
+<div>
+    <div id="EarthRise" style="height: 100vh; width: 100%; position: relative">
+        <div class="bigbgs" data-inviewport="darken-less"
+             style="background: url('../static/images/EarthRise.jpg') center; background-position-y: 30%;"></div>
+        <div data-inviewport="fade-in" style="position: absolute; width: 100%; height: auto">
+            <br><br><br><br><br>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">Earthrise</h1>
+            <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in"
+                 id="top-inner-box" style="transform: translate(-50%, 20vh);">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">This promotion takes you on a unique
+                    journey
+                    to witness our home planet from a distance. You'll travel to the Moon and watch as the Earth
+                    rises
+                    above the lunar horizon, a sight that only a handful of people have ever seen in person.</h1>
             </div>
         </div>
-        <div id="MarsOdyssey" style="height: 100vh; width: 100%; position: relative">
-            <div data-inviewport="darken-less"
-                 style="position: absolute; height: 100%; width: 100%; background: url('../static/images/MarsOdyssey.jpg'); background-size: cover;"></div>
-            <div data-inviewport="fade-in" style="position: absolute; top: 25%; width: 100%; height: 20%">
-                <div class="info-border-box flex items-center justify-center" data-inviewport="fade-in"
-                     style="position: absolute; width: 75%; height: 75%; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                    <h1 class="off-white text-xl md:text-2xl text-center px-12">This promotion offers you a chance to
-                        join
-                        us on our mission to Mars, where you can explore the red planet like never before. You'll get to
-                        witness stunning landscapes, study the planet's geology, and perhaps even discover signs of past
-                        or
-                        present life on Mars</h1>
-                </div>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); transition-delay: 1.25s">
-                <h5 class="off-white text-m md:text-lg text-center px-12">Price: $250, 000</h5>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 65%; left: 50%; transform: translateX(-50%); transition-delay: 0.75s">
-                <button class="off-white px-2 py-1 rounded-lg btn-places-rev"
-                        style="animation: none; opacity: 1;">
-                    Sign Up Now!
-                </button>
-            </div>
-        </div>
-        <div id="Red-Planet-Rendezvous" style="height: 100vh; width: 100%; position: relative">
-            <div data-inviewport="darken-less"
-                 style="position: absolute; height: 100%; width: 100%; background: url('../static/images/Red-Planet-Rendezvous.png'); background-size: cover;"></div>
-            <div data-inviewport="fade-in" style="position: absolute; top: 25%; width: 100%; height: 20%">
-                <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in">
-                    <h1 class="off-white text-lg md:text-2xl text-center px-10">This promotion offers you a chance to
-                        This promotion is designed for couples who want to experience a romantic getaway unlike any
-                        other. You and your partner will travel to Mars, where you can enjoy the breathtaking views,
-                        take moonlit walks on the surface, and share an unforgettable experience together.</h1>
-                </div>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); transition-delay: 1.25s">
-                <h5 class="off-white text-m md:text-lg text-center px-12">Price: $250, 000</h5>
-            </div>
-            <div data-inviewport="fade-in"
-                 style="position: absolute; top: 65%; left: 50%; transform: translateX(-50%); transition-delay: 0.75s">
-                <button class="off-white px-2 py-1 rounded-lg btn-places-rev"
-                        style="animation: none; opacity: 1;">
+        <div class="flex-col"
+             style="position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); width: 100%">
+            <h5 class="off-white text-m md:text-lg text-center px-12" data-inviewport="fade-in"
+                style="transition-delay: 1.25s">Price: $150, 000</h5>
+            <div class="flex" data-inviewport="fade-in"
+                 style="width: 100%; align-items: center; justify-content: center; transition-delay: 0.75s">
+                <button class="off-white mt-2 px-2 py-1 rounded-lg btn-places-rev text-center"
+                        style="animation: none; opacity: 1;"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfN7D9-Ixkyd0y-DNCPaHqqKRc3EN8jDvF6MDTtJ2HQdjSYhw/viewform?usp=sf_link'">
                     Sign Up Now!
                 </button>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
+    <div id="MarsOdyssey" style="height: 100vh; width: 100%; position: relative">
+        <div class="bigbgs" data-inviewport="darken-less"
+             style="background: url('../static/images/MarsOdyssey.jpg') center;"></div>
+        <div data-inviewport="fade-in" style="position: absolute; width: 100%; height: auto">
+            <br><br>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">Mars Odessey</h1>
+            <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in">
+                <h1 class="off-white text-xl md:text-2xl text-center px-10">This promotion offers you a chance to
+                    join
+                    us on our mission to Mars, where you can explore the red planet like never before. You'll get to
+                    witness stunning landscapes, study the planet's geology, and perhaps even discover signs of past
+                    or
+                    present life on Mars</h1>
+            </div>
+        </div>
+        <div class="flex-col"
+             style="position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); width: 100%">
+            <h5 class="off-white text-m md:text-lg text-center px-12" data-inviewport="fade-in"
+                style="transition-delay: 1.25s">Price: $250, 000</h5>
+            <div class="flex" data-inviewport="fade-in"
+                 style="width: 100%; align-items: center; justify-content: center; transition-delay: 0.75s">
+                <button class="off-white mt-2 px-2 py-1 rounded-lg btn-places-rev text-center"
+                        style="animation: none; opacity: 1;"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfN7D9-Ixkyd0y-DNCPaHqqKRc3EN8jDvF6MDTtJ2HQdjSYhw/viewform?usp=sf_link'">
+                    Sign Up Now!
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="Red-Planet-Rendezvous" style="height: 100vh; width: 100%; position: relative">
+        <div class="bigbgs" data-inviewport="darken-less"
+             style="background: url('../static/images/Red-Planet-Rendezvous.png') center;"></div>
+        <div data-inviewport="fade-in" style="position: absolute; width: 100%; height: auto;">
+            <br><br>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">Red Planet Rendezvous</h1>
+            <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in">
+                <h1 class="off-white text-lg md:text-2xl text-center px-10">This promotion offers you a chance to
+                    This promotion is designed for couples who want to experience a romantic getaway unlike any
+                    other. You and your partner will travel to Mars, where you can enjoy the breathtaking views,
+                    take moonlit walks on the surface, and share an unforgettable experience together.</h1>
+            </div>
+        </div>
+        <div class="flex-col"
+             style="position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); width: 100%">
+            <h5 class="off-white text-m md:text-lg text-center px-12" data-inviewport="fade-in"
+                style="transition-delay: 1.25s">Price: $250, 000</h5>
+            <div class="flex" data-inviewport="fade-in"
+                 style="width: 100%; align-items: center; justify-content: center; transition-delay: 0.75s">
+                <button class="off-white mt-2 px-2 py-1 rounded-lg btn-places-rev text-center"
+                        style="animation: none; opacity: 1;"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfN7D9-Ixkyd0y-DNCPaHqqKRc3EN8jDvF6MDTtJ2HQdjSYhw/viewform?usp=sf_link'">
+                    Sign Up Now!
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="Asteroid-Quest" style="height: 100vh; width: 100%; position: relative">
+        <div class="bigbgs" data-inviewport="darken-less"
+             style="background: url('../static/images/AsteroidQuest.png') center;"></div>
+        <div data-inviewport="fade-in" style="position: absolute; width: 100%; height: auto;">
+            <br><br>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">Asteroid Quest</h1>
+            <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in">
+                <h1 class="off-white text-lg md:text-2xl text-center px-10">This promotion is for the adventurous souls
+                    who want to explore the Asteroid Belt, a vast region between Mars and Jupiter filled with thousands
+                    of rocky bodies. You'll travel on a spacecraft that will take you on a thrilling ride through the
+                    asteroid field, allowing you to study these ancient remnants of the early solar system up
+                    close.</h1>
+            </div>
+        </div>
+        <div class="flex-col"
+             style="position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); width: 100%">
+            <h5 class="off-white text-m md:text-lg text-center px-12" data-inviewport="fade-in"
+                style="transition-delay: 1.25s">Price: $400, 000</h5>
+            <div class="flex" data-inviewport="fade-in"
+                 style="width: 100%; align-items: center; justify-content: center; transition-delay: 0.75s">
+                <button class="off-white mt-2 px-2 py-1 rounded-lg btn-places-rev text-center"
+                        style="animation: none; opacity: 1;"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfN7D9-Ixkyd0y-DNCPaHqqKRc3EN8jDvF6MDTtJ2HQdjSYhw/viewform?usp=sf_link'">
+                    Sign Up Now!
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="Galactic-Explorer" style="height: 100vh; width: 100%; position: relative">
+        <div class="bigbgs" data-inviewport="darken-less"
+             style="background: url('../static/images/GalacticExplorer.jpg') center;"></div>
+        <div data-inviewport="fade-in" style="position: absolute; width: 100%; height: auto;">
+            <br><br>
+            <h1 class="off-white text-3xl md:text-6xl text-center px-10">Galactic Explorer</h1>
+            <div class="info-border-box flex items-center justify-center inner-box" data-inviewport="fade-in">
+                <h1 class="off-white text-lg md:text-2xl text-center px-10">This promotion is for the ultimate space
+                    enthusiast, who wants to see it all. You'll journey to multiple destinations throughout the solar
+                    system, including Mars, the Asteroid Belt, and other celestial bodies that we may discover along the
+                    way. You'll have a chance to contribute to scientific research and expand our understanding of the
+                    cosmos.
+                </h1>
+            </div>
+        </div>
+        <div class="flex-col"
+             style="position: absolute; bottom: 9%; left: 50%; transform: translateX(-50%); width: 100%">
+            <h5 class="off-white text-m md:text-lg text-center px-12" data-inviewport="fade-in"
+                style="transition-delay: 1.25s">Price: $850, 000</h5>
+            <div class="flex" data-inviewport="fade-in"
+                 style="width: 100%; align-items: center; justify-content: center; transition-delay: 0.75s">
+                <button class="off-white mt-2 px-2 py-1 rounded-lg btn-places-rev text-center"
+                        style="animation: none; opacity: 1;"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfN7D9-Ixkyd0y-DNCPaHqqKRc3EN8jDvF6MDTtJ2HQdjSYhw/viewform?usp=sf_link'">
+                    Sign Up Now!
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
 
-        var scrolled = false;
-        $(document).ready(function () {
-            $('nav').css('top', 0);
-            scrolled = false;
+    var scrolled = false;
+    $(document).ready(function () {
+        $('nav').css('top', 0);
+        scrolled = false;
+    });
+    const inViewport = (entries, observer) => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+            if (entry.isIntersecting) {
+                entry.target.classList.add("first-time");
+            }
         });
-        const inViewport = (entries, observer) => {
-            entries.forEach(entry => {
-                entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("first-time");
-                }
-            });
-        };
+    };
 
-        function ScrollToElement(element) {
-            element.scrollIntoView({behavior: "smooth"})
+    function ScrollToElement(element) {
+        element.scrollIntoView({behavior: "smooth"})
+    }
+
+    const Obs = new IntersectionObserver(inViewport);
+    const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+    // Attach observer to every [data-inviewport] element:
+    const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+    ELs_inViewport.forEach(EL => {
+        Obs.observe(EL, obsOptions);
+    });
+
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".mobile-menu");
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+    var previousScroll = $(window).scrollTop
+    $(window).scroll(function () {
+        var currScroll = $(this).scrollTop()
+        if (previousScroll > currScroll) {
+            $('nav').css('top', 0)
+        } else {
+            $('nav').css('top', '-100px')
         }
-
-        const Obs = new IntersectionObserver(inViewport);
-        const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
-
-        // Attach observer to every [data-inviewport] element:
-        const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
-        ELs_inViewport.forEach(EL => {
-            Obs.observe(EL, obsOptions);
-        });
-
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector(".mobile-menu");
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-        var previousScroll = $(window).scrollTop
-        $(window).scroll(function () {
-            var currScroll = $(this).scrollTop()
-            if (previousScroll > currScroll) {
-                $('nav').css('top', 0)
-            } else {
-                $('nav').css('top', '-100px')
-            }
-            previousScroll = currScroll;
-            if (!scrolled) {
-                $('#scrollMore').addClass('hidden');
-                scrolled = true;
-            }
-        })
-    </script>
-    <script>
-        var rellax = new Rellax('.rellax')
-    </script>
+        previousScroll = currScroll;
+        if (!scrolled) {
+            $('#scrollMore').addClass('hidden');
+            scrolled = true;
+        }
+    })
+</script>
+<script>
+    var rellax = new Rellax('.rellax')
+</script>
 {% endblock %}

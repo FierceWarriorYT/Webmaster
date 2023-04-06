@@ -118,6 +118,9 @@ nav a:hover {
 }
 
 .links {
+    color: darkslateblue;
+    text-underline-position: under;
+    text-underline: darkslateblue;
     transition: 0.5s;
 }
 
